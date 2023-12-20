@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WaveAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opb-SI-LiM" customClass="AudioWaveIndicator" customModule="WaveAnimation" customModuleProvider="target">
+                                <rect key="frame" x="96.666666666666686" y="351" width="200" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5vE-KK-a7M"/>
+                                    <constraint firstAttribute="height" constant="150" id="6pc-nX-ffU"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-Os-FKy">
+                                <rect key="frame" x="67" y="743.66666666666663" width="266" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-aO-oW1">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.1432952881" green="0.1432952881" blue="0.1432952881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="i6C-vt-agZ"/>
+                                            <constraint firstAttribute="height" constant="34.329999999999998" id="k22-LA-mwK"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="backward.end.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="prevButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Kd-07-cU9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mL-Ak-mAa">
+                                        <rect key="frame" x="112" y="0.0" width="42" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.1432952881" green="0.1432952881" blue="0.1432952881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="pause.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Nw-eI-PlL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYR-Fa-JAw">
+                                        <rect key="frame" x="217" y="0.0" width="49" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.1432952881" green="0.1432952881" blue="0.1432952881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="forward.end.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDy-MU-WNA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Opb-SI-LiM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kb1-oj-c1H"/>
+                            <constraint firstItem="HC6-Os-FKy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="lam-SN-iHz"/>
+                            <constraint firstItem="Opb-SI-LiM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ohy-2E-KmA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HC6-Os-FKy" secondAttribute="trailing" constant="60" id="ubn-be-LDD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HC6-Os-FKy" secondAttribute="bottom" constant="40" id="wSs-G6-Eso"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioWaveIndicator" destination="Opb-SI-LiM" id="c8M-Br-6I1"/>
+                        <outlet property="nextSong" destination="VYR-Fa-JAw" id="wzZ-l8-LMp"/>
+                        <outlet property="pauseSong" destination="7mL-Ak-mAa" id="chy-5J-gvf"/>
+                        <outlet property="previousSong" destination="UvL-aO-oW1" id="rFC-xb-VaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="forward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="pause.fill" catalog="system" width="117" height="128"/>
+    </resources>
+</document>
